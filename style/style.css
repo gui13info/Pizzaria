@@ -103,7 +103,7 @@ body{
 
 #copyright a{
     display: block;
-    text-align: center;
+    margin: 0 auto;
 }
 
 #copyright p{
@@ -112,4 +112,10 @@ body{
 
     font-size: 12px;
     font-family: "Helvetica neue", sans-serif;
+}
+
+#logo-hellopizza{
+    height: 70px;
+    width: 304px;
+    background-image: url(../img/logo-helloPizza.png);
 }
