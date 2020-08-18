@@ -5,6 +5,13 @@ var btnIncrementa = document.querySelector('.btn-incrementa');
 btnIncrementa.addEventListener('click' , incrementa);
 function incrementa() {
     input.value++
+
+    var item = btnIncrementa.closest('.item');
+    var precoItem = item.querySelector('.preco-item');
+    var preco = Number(precoItem.textContent);
+    
+    var Total = document.querySelector('#total');
+    Total.textContent = preco + Number(Total.textContent);
 }
 
 //DECREMENTANDO VALOR
