@@ -23,6 +23,13 @@ function decrementa() {
         input.value = 0;
     }else{
         input.value--;
+
+        var item = btnDecrementa.closest('.item');
+        var precoItem = item.querySelector('.preco-item');
+        var preco = Number(precoItem.textContent);
+        
+        var Total = document.querySelector('#total');
+        Total.textContent = (Number(Total.textContent) - preco) 
     }
 }
 
