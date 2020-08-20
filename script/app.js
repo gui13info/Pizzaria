@@ -1,23 +1,24 @@
 var input = document.querySelector('.quantidade');
-
 var btnIncrementa = document.querySelector('.btn-incrementa');
 
+//INCREMENTANDO VALOR
 btnIncrementa.addEventListener('click' , incrementa);
+
 function incrementa() {
     input.value++
 
     var item = btnIncrementa.closest('.item');
-    var precoItem = item.querySelector('.preco-item');
-    var preco = Number(precoItem.textContent);
     
-    var Total = document.querySelector('#total');
-    Total.textContent = preco + Number(Total.textContent);
+    var preco = pegaPrecoItem(item);
+    
+    addTotal(preco);
 }
 
 //DECREMENTANDO VALOR
 var btnDecrementa = document.querySelector('.btn-decrementa')
 
 btnDecrementa.addEventListener('click', decrementa);
+
 function decrementa() {
     if(input.value <= 0){
         input.value = 0;
@@ -25,12 +26,25 @@ function decrementa() {
         input.value--;
 
         var item = btnDecrementa.closest('.item');
-        var precoItem = item.querySelector('.preco-item');
-        var preco = Number(precoItem.textContent);
+
+        var preco = pegaPrecoItem(item);
         
-        var Total = document.querySelector('#total');
-        Total.textContent = (Number(Total.textContent) - preco) 
+        removeTotal(preco);
     }
 }
 
-//CALCULANDO TOTAL
+
+function pegaPrecoItem(item){
+    var precoItem = item.querySelector('.preco-item');
+    return (Number(precoItem.textContent));
+}
+
+function addTotal(preco){
+    var Total = document.querySelector('#total');
+    Total.textContent = preco + Number(Total.textContent);
+}
+
+function removeTotal(preco){
+    var Total = document.querySelector('#total');
+    Total.textContent = Number(Total.textContent) - preco;
+}
