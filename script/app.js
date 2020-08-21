@@ -20,17 +20,17 @@ var btnDecrementa = document.querySelector('.btn-decrementa')
 btnDecrementa.addEventListener('click', decrementa);
 
 function decrementa() {
-    if(input.value <= 0){
-        input.value = 0;
-    }else{
-        input.value--;
-
         var item = btnDecrementa.closest('.item');
-
-        var preco = pegaPrecoItem(item);
         
-        removeTotal(preco);
-    }
+        var input = item.querySelector('.quantidade');
+        
+        if(input.value <= 0){
+            input.value = 0;
+        }else{
+            input.value--;
+            var preco = pegaPrecoItem(item);
+            addTotal(-preco);
+        }
 }
 
 
@@ -42,9 +42,4 @@ function pegaPrecoItem(item){
 function addTotal(preco){
     var Total = document.querySelector('#total');
     Total.textContent = preco + Number(Total.textContent);
-}
-
-function removeTotal(preco){
-    var Total = document.querySelector('#total');
-    Total.textContent = Number(Total.textContent) - preco;
 }
