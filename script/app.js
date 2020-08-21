@@ -1,16 +1,16 @@
-var input = document.querySelector('.quantidade');
+// var input = document.querySelector('.quantidade');
 var btnIncrementa = document.querySelector('.btn-incrementa');
 
 //INCREMENTANDO VALOR
 btnIncrementa.addEventListener('click' , incrementa);
 
 function incrementa() {
-    input.value++
-
     var item = btnIncrementa.closest('.item');
     
+    var input = item.querySelector('.quantidade');
+    input.value++;
+
     var preco = pegaPrecoItem(item);
-    
     addTotal(preco);
 }
 
