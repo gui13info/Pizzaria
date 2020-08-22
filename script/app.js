@@ -1,18 +1,21 @@
-// var input = document.querySelector('.quantidade');
-var btnIncrementa = document.querySelector('.btn-incrementa');
-
 //INCREMENTANDO VALOR
-btnIncrementa.addEventListener('click' , incrementa);
+var btnIncrementas = document.querySelectorAll('.btn-incrementa');
 
-function incrementa() {
-    var item = btnIncrementa.closest('.item');
+for(let botao of btnIncrementas){
+    botao.addEventListener('click' , incrementa);
     
-    var input = item.querySelector('.quantidade');
-    input.value++;
+    function incrementa() {
+        var item = botao.closest('.item');
+        
+        var input = item.querySelector('.quantidade');
+        input.value++;
+    
+        var preco = pegaPrecoItem(item);
+        addTotal(preco);
+    }
 
-    var preco = pegaPrecoItem(item);
-    addTotal(preco);
 }
+
 
 //DECREMENTANDO VALOR
 var btnDecrementa = document.querySelector('.btn-decrementa')
@@ -20,20 +23,19 @@ var btnDecrementa = document.querySelector('.btn-decrementa')
 btnDecrementa.addEventListener('click', decrementa);
 
 function decrementa() {
-        var item = btnDecrementa.closest('.item');
-        
-        var input = item.querySelector('.quantidade');
-        
-        if(input.value <= 0){
-            input.value = 0;
-        }else{
-            input.value--;
-            var preco = pegaPrecoItem(item);
-            addTotal(-preco);
-        }
+    var item = btnDecrementa.closest('.item');
+    
+    var input = item.querySelector('.quantidade');
+    if(input.value <= 0){
+        input.value = 0;
+    }else{
+        input.value--;
+        var preco = pegaPrecoItem(item);
+        addTotal(-preco);
+    }
 }
 
-
+//Funções auxiliares
 function pegaPrecoItem(item){
     var precoItem = item.querySelector('.preco-item');
     return (Number(precoItem.textContent));
