@@ -16,24 +16,27 @@ for(let botao of btnIncrementas){
 
 }
 
-
 //DECREMENTANDO VALOR
-var btnDecrementa = document.querySelector('.btn-decrementa')
+var btnDecrementas = document.querySelectorAll('.btn-decrementa')
 
-btnDecrementa.addEventListener('click', decrementa);
+for(let botao of btnDecrementas){
+    botao.addEventListener('click', decrementa);
 
-function decrementa() {
-    var item = btnDecrementa.closest('.item');
-    
-    var input = item.querySelector('.quantidade');
-    if(input.value <= 0){
-        input.value = 0;
-    }else{
-        input.value--;
-        var preco = pegaPrecoItem(item);
-        addTotal(-preco);
+    function decrementa() {
+        var item = botao.closest('.item');
+        
+        var input = item.querySelector('.quantidade');
+        if(input.value <= 0){
+            input.value = 0;
+        }else{
+            input.value--;
+            var preco = pegaPrecoItem(item);
+            addTotal(-preco);
+        }
     }
+
 }
+
 
 //Funções auxiliares
 function pegaPrecoItem(item){
