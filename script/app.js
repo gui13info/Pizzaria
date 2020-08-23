@@ -37,6 +37,11 @@ for(let botao of btnDecrementas){
 
 }
 
+var formPedido = document.forms.pedido;
+
+formPedido.addEventListener('submit', () => {
+    
+})
 
 //Funções auxiliares
 function pegaPrecoItem(item){
