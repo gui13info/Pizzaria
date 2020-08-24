@@ -39,8 +39,23 @@ for(let botao of btnDecrementas){
 
 var formPedido = document.forms.pedido;
 
-formPedido.addEventListener('submit', () => {
+formPedido.addEventListener('submit', (event) => {
     
+    var contador = 0;
+
+   var inputs = formPedido.querySelectorAll('input.quantidade');
+
+   for(let input of inputs){
+       if(input.value > 0){
+           contador++;
+       }
+   }
+
+   if(contador == 0){
+       alert('Deve ter pelo menos 1 pizza no pedido');
+       event.preventDefault();
+   }
+
 })
 
 //Funções auxiliares
