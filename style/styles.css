@@ -157,6 +157,8 @@ footer p{
     font-weight: bold;
 }
 
+/* MEDIA QUERIES */
+
 @media(min-width: 600px){
 
     #sabores-pizzas{

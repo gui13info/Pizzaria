@@ -118,6 +118,8 @@
 	min-width: 12.3rem;
 }
 
+/* MEDIA QUERIES */
+
 @media(min-width: 768px){
 	.pedido h2{
 		font-size: 1.8rem;
