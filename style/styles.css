@@ -6,6 +6,7 @@
 
 body{
     background-color: #060606;
+    font-family: "Helvetica Neue", sans-serif;
 }
 
 .container {
@@ -20,7 +21,6 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
     color: #fff;
-    font-family: "Helvetica Neue", sans-serif;
 }
 
 .container header{
