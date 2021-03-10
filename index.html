@@ -9,12 +9,12 @@
         <link rel="stylesheet" type="text/css" href="style/pedido.css">
     </head>
     <body>
-        <header>
-            <div id="banner">
+        <div class="container">
+            <header>
                 <h1>
                     <img src="img/logo-helloPizza.png" alt="Hello Pizza">
                 </h1>
- 
+    
                 <nav>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -22,13 +22,11 @@
                         <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
-            </div>
-        </header>
-         
-        <section>
+            </header>
+             
             <div id="sabores-pizzas">
                 <h2>Conheça os nossos sabores exclusivos de pizza</h2>
- 
+    
                 <table>
                     <tr>
                         <th>Pizzas</th>
@@ -76,12 +74,11 @@
                     </tr>
                 </table>
             </div>
-        </section>
-
-        <!-- {# PEDIDOS -> ALTERAR PÓS TÉRMINO DAS AULAS #} -->
-        <section class="estilo">
+    
+            <!-- {# PEDIDOS -> ALTERAR PÓS TÉRMINO DAS AULAS #} -->
             <div class="pedido">
-                <h2 align="center">Pedido</h2>
+                <h2>Pedido</h2>
+
                     <form name="pedido" action="http://arquivo.devmedia.com.br/projeto/requisicao.php" method="POST">
                         <table>
                             <thead>
@@ -157,15 +154,15 @@
                     <input type="submit" value="enviar" />
                 </form>        
             </div>
-        </section>
- 
-        <footer>
-            <div id="copyright">
-                <a href="#" id="logo-hellopizza"></a>
- 
-                <p>Todos os direitos reservados &copy; 2020</p>
-            </div>
-        </footer>
+     
+            <footer>
+                <div id="copyright">
+                    <a href="#" id="logo-hellopizza"></a>
+     
+                    <p>Todos os direitos reservados &copy; 2020</p>
+                </div>
+            </footer>
+        </div>
 
         <script src="script/app.js"></script>
     </body>
