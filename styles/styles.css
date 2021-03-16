@@ -43,7 +43,7 @@ body{
 
 .container header nav{
     width: 15rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
 }
 
 .container header nav ul{
@@ -65,7 +65,7 @@ body{
 .container header nav ul li a{
     text-decoration: none;
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #fff;
 
@@ -80,6 +80,11 @@ body{
 /* SABORES PIZZAS */
 
 #sabores-pizzas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     margin-top: 8rem;
     padding-bottom: 6rem;
 }
@@ -91,9 +96,7 @@ body{
     
     font-size: 1.2rem;
     color: #ffffff;
-
-    margin: 0;
-    line-height: 6;
+    line-height: 2;
 }
 
 #sabores-pizzas table{
@@ -108,11 +111,11 @@ body{
 }
 
 #sabores-pizzas table th, td {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color:#fff;
 
     border:1px #000 solid;
-	padding: 1rem;
+	padding: 0.3rem;
 	text-align: center;
 }
 
@@ -161,8 +164,25 @@ footer p{
 
 @media(min-width: 600px){
 
+    .container header nav{
+        margin: 0 2rem 0 0;
+    }
+
+    .container header nav ul li a{
+        font-size: 1.5rem;
+    }
+
     #sabores-pizzas{
         margin-top: 15rem;
+    }
+
+    #sabores-pizzas h2{
+        line-height: 6;
+    }
+
+    #sabores-pizzas table th, td{
+        font-size: 1.3rem;
+        padding: 1rem;
     }
 }
 

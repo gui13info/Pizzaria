@@ -9,7 +9,6 @@
 	text-align: center;
     text-transform: uppercase;
     text-shadow: 2px 2px 10px #2a2a2a;
-    
     font-size: 1.2rem;
     color: #ffffff;
 
@@ -25,22 +24,17 @@
     border-collapse: collapse;
     
     text-transform: uppercase;
-	
 }
-
-.pedido table th, td, p{
-	font-size: 1.2rem;
-	color:#fff;
-}
-
 .pedido table th {
 	color: #4d4d4d;
 	font-weight: bold;
 }
 
-.pedido table th, td {
+.pedido table th, td{
+	font-size: 1rem;
+	color:#fff;
 	border:1px #000 solid;
-	padding: 1.5rem;
+	padding: 0.6rem;
 	text-align: center;
 	width: 20%;
 }
@@ -60,10 +54,7 @@
     height: 1rem;
     
 	border-radius: 3rem;
-	background-color: transparent;
-    
-    display: block;
-    
+	background-color: transparent;    
     padding: 2.5rem 2.5rem;
     
 	text-transform: uppercase;
@@ -71,7 +62,7 @@
 }
 
 .pedido input[type="submit"] {
-    width: 38rem;
+    width: 34rem;
     margin: 2.5rem 0;
     padding-top: 1.5rem;
 	cursor: pointer;
@@ -92,7 +83,7 @@
 .pedido form a {
 	cursor: pointer;
 	border: 1.3px solid #fff;
-	padding: 0.8rem 1.4rem;
+	padding: 0.4rem 0.8rem;
 	border-radius: 50%;
 }
 
@@ -105,20 +96,39 @@
 }
 
 .pedido input.quantidade {
-	display: inline;
-
 	text-align: center;
 	border: none;
 	width: 3rem;
 	padding: 0.5rem 0;
-	margin-left: 1.5rem;
 }
 
 .pedido form td:nth-child(2){
-	min-width: 12.3rem;
+	min-width: 10rem;
 }
 
 /* MEDIA QUERIES */
+
+@media(min-width: 500px){
+	.pedido form a {
+		padding: 0.8rem 1.4rem;
+	}
+
+	.pedido table th, td{
+		padding: 1.5rem;
+	}
+	
+	.pedido input[type="submit"]{
+		width: 38rem;
+	}
+
+	.pedido input.quantidade{
+		margin-left: 1.5rem;
+	}
+	
+	.pedido form td:nth-child(2){
+		min-width: 12.3rem;
+	}
+}
 
 @media(min-width: 768px){
 	.pedido h2{
@@ -159,5 +169,6 @@
 
 	.pedido table th, td {
 		padding: 2.5rem;
+		font-size: 1.2rem;
 	}
 }
